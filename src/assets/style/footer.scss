@@ -1,0 +1,16 @@
+@import "./var.scss";
+
+@mixin Center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    height: 80px;
+    background-color: $red;
+    font-size: $main-font-size;
+    font-weight: $main-font-weight;
+    color: $main-text-color;
+    @include Center();
+}

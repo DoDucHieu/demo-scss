@@ -1,0 +1,40 @@
+@mixin ButtonStyle($color, $bgc, $w, $h) {
+    color: $color;
+    width: $w;
+    height: $h;
+    background-color: $bgc;
+}
+
+.btn-default {
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.body {
+    height: 700px;
+    padding: 0px 200px;
+
+    .list-btn {
+        margin-top: 40px;
+        .btn-cancel {
+            @include ButtonStyle(#222222, #ffffff, 120px, 80px);
+            @extend .btn-default;
+        }
+
+        .btn-edit {
+            @include ButtonStyle(#ffffff, #7e81ff, 120px, 80px);
+            @extend .btn-default;
+        }
+
+        .btn-create {
+            @include ButtonStyle(#222222, #87fa70, 120px, 80px);
+            @extend .btn-default;
+        }
+
+        .btn-del {
+            @include ButtonStyle(#ffffff, #ff0000, 120px, 80px);
+            @extend .btn-default;
+        }
+    }
+}
